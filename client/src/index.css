@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* small helpers to match layout */
+html, body, #root {
+  height: 100%;
+}
+body {
+  @apply bg-[#f6fbff] antialiased;
+}
