@@ -6,9 +6,9 @@ import ChatBored from './ChatBored.jsx'
 
 export default function ChatInterface(){
     return(
-        <div className='flex '>
+        <div className='flex h-screen'>
             {/* Side list of chats */}
-            <div className='sticky top-0 h-screen overflow-y-auto'>
+            <div className='sticky top-0 h-screen overflow-y-auto w-80'>
             <SideListChats />
             </div>
             {/* Chat area */}

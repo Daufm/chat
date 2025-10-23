@@ -1,5 +1,6 @@
 
 
+
 export default function ChatBored() {
   const messages = [
     { id: 1, side: 'left', name: 'Ava', avatar: '/avatars/ava.jpg', text: 'Morning! Drafted the hero section variants.', time: '9:32 AM' },
@@ -12,7 +13,7 @@ export default function ChatBored() {
   return (
     <div className="flex flex-col h-full min-h-screen bg-[#f6fbff]">
       {/* Header */}
-      <header className="flex items-center justify-between px-6 py-3 border-b bg-white sticky top-0 z-10">
+      <header className="flex items-center justify-between px-6 py-3 border-b bg-white">
         <div className="flex items-center gap-3">
           <img src="/avatars/design.jpg" alt="group" className="w-10 h-10 rounded-full object-cover" />
           <div>
@@ -29,7 +30,7 @@ export default function ChatBored() {
       </header>
 
       {/* Messages area */}
-      <main className="flex-1 overflow-y-auto p-6 space-y-2">
+      <main className="flex-1 overflow-y-auto p-6 space-y-4">
         <div className="text-center text-xs text-gray-400">Today</div>
 
         {messages.map((m) => (
@@ -50,7 +51,7 @@ export default function ChatBored() {
       </main>
 
       {/* Composer / footer */}
-      <footer className="px-6 py-4 border-t bg-white sticky bottom-0">
+      <footer className="px-6 py-4 border-t bg-white">
         <div className="flex items-center gap-3">
           <button className="p-2 rounded-full bg-white border text-gray-600">📎</button>
           <div className="flex-1">
