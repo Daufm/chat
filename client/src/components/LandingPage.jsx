@@ -9,13 +9,13 @@ export default function LandingPage() {
           <div className="bg-blue-600 text-white font-bold rounded-full w-7 h-7 flex items-center justify-center">
             C
           </div>
-          <span className="font-semibold text-lg">Chatter</span>
+          <span className="font-semibold text-lg ">Chatter</span>
         </div>
 
         <nav className="flex items-center gap-4 text-sm">
-          <button className="text-gray-600 hover:text-gray-800">About</button>
-          <button className="text-gray-600 hover:text-gray-800">Security</button>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-full font-medium hover:bg-blue-700">
+          <button className="text-gray-600 hover:text-gray-800 cursor-pointer">About</button>
+          <button className="text-gray-600 hover:text-gray-800 cursor-pointer">Security</button>
+          <button className="bg-blue-600 text-white px-4 py-2 rounded-full font-medium hover:bg-blue-700 cursor-pointer">
             Sign in
           </button>
         </nav>
@@ -34,10 +34,10 @@ export default function LandingPage() {
               share files, and manage members with ease.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="bg-blue-600 text-white px-5 py-3 rounded-full font-medium hover:bg-blue-700">
+              <button className="bg-blue-600 cursor-pointer text-white px-5 py-3 rounded-full font-medium hover:bg-blue-700">
                 Get Started
               </button>
-              <button className="flex items-center gap-2 px-5 py-3 border rounded-full text-gray-700 hover:bg-white/60">
+              <button className="flex items-center cursor-pointer gap-2 px-5 py-3 border rounded-full text-gray-700 hover:bg-white/60">
                 <span>▶</span> See Demo
               </button>
             </div>
