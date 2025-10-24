@@ -2,13 +2,22 @@
 import cors from 'cors'
 import {Server} from 'socket.io'
 import http from 'http'
+import mongoose from 'mongoose'
 import UserRouter from './routes/user.routes.js'
+import MessageRouter from "./routes/message.routes.js";
+import ConversationRouter from './routes/conversation.route.js'
 
 
 const app = express()
 const server = http.createServer(app)
 
 app.use(express.json())
+
+// Middleware to attach io to req
+app.use((req ,res , next)=>{
+    req.io = io
+    next()
+})
 
 app.use(cors({
     origin: "http://localhost:5173",
@@ -26,7 +35,20 @@ const io = new Server(server, {
     }
 })
 
+// Routes
 app.use('/api/users', UserRouter)
+app.use("/api/messages", MessageRouter);
+app.use('/api/conversations/', ConversationRouter);
+
+
+
+mongoose.connect(`${process.env.MONGO_URI}`, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}
+)
+
+
 
 
 io.on("connection", (socket) => {
